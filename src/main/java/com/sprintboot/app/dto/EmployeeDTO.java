@@ -16,7 +16,7 @@ public class EmployeeDTO {
 	private String lastName;
 	private String email;
 	private String text;
-	private long post;
+	private Post post;
 	public EmployeeDTO(Employee emp) {
 		super();
 		this.id = emp.getId();
@@ -24,7 +24,7 @@ public class EmployeeDTO {
 		this.lastName = emp.getLastName();
 		this.email = emp.getEmail();
 		this.text = emp.getText();
-		this.post = (emp.getPost() != null) ? emp.getPost().getId() : 0;
+		this.post = (emp.getPost() != null) ? emp.getPost() : null;
 	}
 	
 	
